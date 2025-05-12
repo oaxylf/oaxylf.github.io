@@ -1,0 +1,108 @@
+/* Cosmic 404 Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #0f0c29;
+    color: #fff;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="10%" cy="15%" r="1" fill="white" opacity="0.8"/><circle cx="25%" cy="70%" r="1.5" fill="white" opacity="0.5"/><circle cx="50%" cy="30%" r="1" fill="white" opacity="0.6"/><circle cx="75%" cy="50%" r="2" fill="white" opacity="0.9"/><circle cx="90%" cy="20%" r="1" fill="white" opacity="0.4"/></svg>');
+    animation: twinkle 5s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+/* Glitch Effect */
+.glitch-container {
+    margin-bottom: 3rem;
+}
+
+.glitch {
+    font-size: 8rem;
+    font-weight: 700;
+    position: relative;
+    color: #fff;
+}
+
+@keyframes glitch-effect {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: -1rem;
+}
+
+/* Glass Card (Reuse from portfolio) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.glass-card p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Buttons (Enhanced) */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.6);
+}
